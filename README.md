@@ -1,10 +1,10 @@
 # TheadDemo
 Класс, демонстируещий использование методов класса Thread в главном потоке программы.
-#HelloThread
+# HelloThread
 Класс Thread сам реализует интерфейс Runnable.
-#HelloRunnable
+# HelloRunnable
 Реализация интерфейса Runnable.
-#EggOrChiken
+# EggOrChiken
 Данный класс реализует задачу "Курица и яйцо". В нем создается два потока с разными приоритетами.
-#RaceThread
+# RaceThread
 Реализует догонялки двух потоков.
