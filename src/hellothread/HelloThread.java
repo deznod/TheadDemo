@@ -11,8 +11,10 @@ package hellothread;
 public class HelloThread  extends Thread {
     public void run() {
         try {
+            for (int i = 0; i <200 ; i++) {
 
-            while (true) {
+
+
                 Thread.sleep(3000);
                 System.out.println("Hello from a thread");
             }
@@ -23,15 +25,6 @@ public class HelloThread  extends Thread {
 
     public static void main(String args[]) {
         (new HelloThread()).start();
-        try {
-
-            while (true) {
-                Thread.sleep(6000);
-
-                System.out.println("Hello from main thread");
-            }
-        } catch (InterruptedException e) {
-
-        }
+        (new HelloThread()).start();
     }
 }
