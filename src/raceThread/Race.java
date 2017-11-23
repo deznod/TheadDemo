@@ -31,7 +31,7 @@ public class Race extends Thread {
             if (i == 80) {
                 thread.setPriority(priorityTwo);
             }
-        }
+        } 
 
     }
 
