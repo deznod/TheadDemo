@@ -1,3 +1,5 @@
+package raceThread;
+
 public class Run {
     public static void main(String[] args) {
         Race PlayerOne = new Race("Дудка",1,10);
