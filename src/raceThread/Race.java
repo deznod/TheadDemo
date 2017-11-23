@@ -1,3 +1,5 @@
+package raceThread;
+
 public class Race extends Thread {
     public static final int MAX_COUNT_OF_STEPS = 200;
     public static final int SLEAP_THREAD = 5;
