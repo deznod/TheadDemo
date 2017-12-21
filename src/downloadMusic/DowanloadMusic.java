@@ -8,9 +8,9 @@ import java.util.stream.Collectors;
 
 public class DowanloadMusic extends Thread {
 
-    private static final String IN_FILE_TXT = "/home/juja/IdeaProjects/TheadDemo/src/downloadMusic/inFile.txt";
-    private static final String OUT_FILE_TXT = "/home/juja/IdeaProjects/TheadDemo/src/downloadMusic/outFile.txt";
-    private static final String PATH_TO_MUSIC = "/home/juja/IdeaProjects/TheadDemo/src/downloadMusic/music/";
+    private static final String IN_FILE_TXT = "F:\\TheadDemo\\src\\downloadMusic\\inFile.txt";
+    private static final String OUT_FILE_TXT = "F:\\TheadDemo\\src\\downloadMusic\\outFile.txt";
+    private static final String PATH_TO_MUSIC = "F:\\TheadDemo\\src\\downloadMusic\\music\\";
 
     @Override
     public void run() {
@@ -19,7 +19,7 @@ public class DowanloadMusic extends Thread {
             int count = 0;
             try {
                 while ((music = musicFile.readLine()) != null) {
-                    new Download(music, PATH_TO_MUSIC + String.valueOf(count) + ".mp3").start();
+                    new DownloadUsingNIO(music, PATH_TO_MUSIC + String.valueOf(count) + ".mp3").start();
                     count++;
                 }
             } catch (IOException e) {
@@ -58,3 +58,4 @@ public class DowanloadMusic extends Thread {
     }
 
 }
+

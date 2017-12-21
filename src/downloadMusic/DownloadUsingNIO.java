@@ -8,11 +8,11 @@ import java.net.URL;
 import java.nio.channels.Channels;
 import java.nio.channels.ReadableByteChannel;
 
-public class Download extends Thread {
+public class DownloadUsingNIO extends Thread {
     private   String strUrl;
     private   String file;
 
-    public Download(String strUrl,String file) {
+    public DownloadUsingNIO(String strUrl, String file) {
         this.strUrl = strUrl;
         this.file = file;
     }
