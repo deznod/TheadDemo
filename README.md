@@ -10,7 +10,7 @@
 Реализует догонялки двух потоков.
 # <a href="https://github.com/deznod/TheadDemo/tree/master/src/copyFiles">CopyFiles</a>
 Реализует задачу "Копирование файлов"
-# <a href="https://github.com/deznod/TheadDemo/tree/master/src/MultiThreadedReading"MultiThreadedReading</a>
+# <a href="https://github.com/deznod/TheadDemo/tree/master/src/MultiThreadedReading">MultiThreadedReading</a>
 Реализует задачу "Многопоточное считывание из файлов"
 # <a href="https://github.com/deznod/TheadDemo/tree/master/src/downloadMusic">DownloadMusic</a>
 Даннаые классы реализуют скачивание музыки из ссылки
