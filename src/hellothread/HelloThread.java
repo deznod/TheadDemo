@@ -14,7 +14,7 @@ public class HelloThread extends Thread {
     public void run() {
         try {
 
-            for (int i = 0; i <20; i++) {
+            for (int i = 0; i <200; i++) {
 
                 System.out.println("hello from a " + getName());
                 Thread.sleep(1000);
