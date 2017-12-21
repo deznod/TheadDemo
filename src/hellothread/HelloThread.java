@@ -1,30 +1,33 @@
 package hellothread;
 
 /**
- * Создание подкласса Thread
+ * Создание потока Thread
  *
- * Класс Thread сам реализует интерфейс Runnable
- * хотя его метод run() ничего не делает
+ * Класс Thread сам реализует интерфес Runnable
+ * хотя его метол run() ничего не делает,
  * Подкласс класса Thread может
- * обеспечить собственную реализацию метода run()
+ * обеспечить собственную реализацию метода run().
  */
-public class HelloThread  extends Thread {
+
+public class HelloThread extends Thread {
+
     public void run() {
         try {
-            for (int i = 0; i <200 ; i++) {
 
+            for (int i = 0; i <20; i++) {
 
+                System.out.println("hello from a " + getName());
+                Thread.sleep(1000);
 
-                Thread.sleep(3000);
-                System.out.println("Hello from a thread");
             }
-        } catch (InterruptedException e) {
-            System.out.println("Поток завершен");
+        }catch (InterruptedException e){
+
         }
     }
 
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         (new HelloThread()).start();
         (new HelloThread()).start();
+
     }
 }
