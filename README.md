@@ -8,3 +8,9 @@
 Данный класс реализует задачу "Курица и яйцо". В нем создается два потока с разными приоритетами.
 # <a href="https://github.com/deznod/TheadDemo/tree/master/src/raceThread"> RaceThread</a>
 Реализует догонялки двух потоков.
+#<a href="https://github.com/deznod/TheadDemo/tree/master/src/copyFiles">CopyFiles</a>
+Реализует задачу "Копирование файлов"
+#<a href="https://github.com/deznod/TheadDemo/tree/master/src/MultiThreadedReading"MultiThreadedReading</a>
+Реализует задачу "Многопоточное считывание из файлов"
+#<a href="https://github.com/deznod/TheadDemo/tree/master/src/downloadMusic">DownloadMusic</a>
+Даннаые классы реализуют скачивание музыки из ссылки
