@@ -26,7 +26,7 @@ public class MultiThreadReading extends Thread {
 
         String string;
 
-        try (BufferedReader br = new BufferedReader(new FileReader(addres))) {
+        try (BufferedReader br = new BufferedReader(new FileReader(addres))) { 
 
             while ((string = br.readLine()) != null) {
 
