@@ -14,3 +14,5 @@
 Реализует задачу "Многопоточное считывание из файлов"
 # <a href="https://github.com/deznod/TheadDemo/tree/master/src/downloadMusic">DownloadMusic</a>
 Даннаые классы реализуют скачивание музыки из ссылки
+# <a href="https://github.com/deznod/TheadDemo/tree/master/src/DowanloadPicture">DowanloadPicture</a>
+Реализует задачу скачивание картинки с интерфейсом пользователя
