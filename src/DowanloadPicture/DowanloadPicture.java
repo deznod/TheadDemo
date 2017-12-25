@@ -18,11 +18,13 @@ import java.io.IOException;
 
             Pane root = new Pane();
             Button btn = new Button();
+            Button btn1 = new Button();
             btn.setText("DOWANLOAD PICTURE");
             btn.setTranslateX(80);
             btn.setTranslateY(80);
             btn.setOnAction(event -> {
                 DirectoryChoose start= new DirectoryChoose();
+
                 try {
                     start.start(primaryStage);
                 } catch (Exception e) {
@@ -30,7 +32,7 @@ import java.io.IOException;
                 }
             });
                 Scene scene = new Scene(root);
-                root.getChildren().addAll(btn);
+                root.getChildren().addAll(btn,btn1);
                 primaryStage.setScene(scene);
                 primaryStage.show();
             }
