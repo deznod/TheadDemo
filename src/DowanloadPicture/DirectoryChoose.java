@@ -18,30 +18,29 @@ import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-public class DirectoryChoose extends Application{
+public class DirectoryChoose extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
-        GridPane root= new GridPane();
-        root.setPadding(new Insets(10,10,10,10));
+        GridPane root = new GridPane();
+        root.setPadding(new Insets(10, 10, 10, 10));
         root.setHgap(5);
         root.setVgap(5);
 
-
-        TextField urlName = new TextField();
-        GridPane.setConstraints(urlName,0,0);
-
+        TextField urlName = new TextField("Insert Your url");
+        GridPane.setConstraints(urlName, 0, 0);
 
         Button btn1 = new Button();
-        btn1.setText("DOWANLOAD PICTURE");
+        btn1.setText("DOWNLOAD PICTURE");
         btn1.setTranslateX(80);
         btn1.setTranslateY(80);
-        btn1.setOnAction(event -> { Stage stage = new Stage();
+        btn1.setOnAction(event -> {
+            Stage stage = new Stage();
             FileChooser fileChooser = new FileChooser();
             fileChooser.setTitle("Select directory for save");
             fileChooser.setInitialFileName("decryptImage");
             fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("Image", "*.jpg"));
             File file = fileChooser.showSaveDialog(stage);
-            String urlStringName =String.valueOf(urlName.getCharacters());
+            String urlStringName = String.valueOf(urlName.getCharacters());
             //System.out.println(urlStringName);
             if (file != null) {
                 ImageView imageView = new ImageView();
@@ -64,24 +63,16 @@ public class DirectoryChoose extends Application{
                             null), "png", file);
                 } catch (IOException e) {
                     e.printStackTrace();
-                }}});
+                }
+            }
+        });
 
-
-
-
-
-
-
-        Scene scene = new Scene(root,300,300);
-        root.getChildren().addAll(urlName,btn1);
+        Scene scene = new Scene(root, 300, 300);
+        root.getChildren().addAll(urlName, btn1);
         primaryStage.setScene(scene);
         primaryStage.show();
 
-
-
-}
-
-
+    }
 
     public static void main(String[] args) {
         launch(args);
