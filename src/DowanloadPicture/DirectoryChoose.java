@@ -29,19 +29,25 @@ public class DirectoryChoose extends Application {
         TextField urlName = new TextField("Insert Your url");
         GridPane.setConstraints(urlName, 0, 0);
 
+        TextField content = new TextField();
+        content.setPromptText("Insert name file");
+        GridPane.setConstraints(content, 0, 1);
+
+
         Button btn1 = new Button();
         btn1.setText("DOWNLOAD PICTURE");
-        btn1.setTranslateX(80);
+        btn1.setTranslateX(10);
         btn1.setTranslateY(80);
         btn1.setOnAction(event -> {
+            String name = String.valueOf(content.getCharacters());
             Stage stage = new Stage();
             FileChooser fileChooser = new FileChooser();
             fileChooser.setTitle("Select directory for save");
-            fileChooser.setInitialFileName("decryptImage");
+            fileChooser.setInitialFileName(name);
             fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("Image", "*.jpg"));
             File file = fileChooser.showSaveDialog(stage);
             String urlStringName = String.valueOf(urlName.getCharacters());
-            //System.out.println(urlStringName);
+
             if (file != null) {
                 ImageView imageView = new ImageView();
                 URL url = null;
@@ -66,12 +72,10 @@ public class DirectoryChoose extends Application {
                 }
             }
         });
-
-        Scene scene = new Scene(root, 300, 300);
-        root.getChildren().addAll(urlName, btn1);
+        Scene scene = new Scene(root, 250, 150);
+        root.getChildren().addAll(urlName, btn1, content);
         primaryStage.setScene(scene);
         primaryStage.show();
-
     }
 
     public static void main(String[] args) {
