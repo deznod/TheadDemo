@@ -30,7 +30,7 @@ public class CopyFiles extends Thread {
             }
             timeRun=System.currentTimeMillis()-time;
         } catch (IOException e) {
-            System.out.println("Ошибка при записи в файл");
+            e.printStackTrace();
         }
     }
 }
