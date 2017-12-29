@@ -25,11 +25,12 @@ public class CopyFiles extends Thread {
              BufferedReader bufferedReader = new BufferedReader(new FileReader(adresSource))) {
             String copyLine;
             while ((copyLine = bufferedReader.readLine()) != null) {
-
+                bufferedWriter.close();
                 bufferedWriter.write(copyLine + '\n');
             }
             timeRun=System.currentTimeMillis()-time;
         } catch (IOException e) {
+            System.out.println("Ошибка "+e.toString());
             e.printStackTrace();
         }
     }
