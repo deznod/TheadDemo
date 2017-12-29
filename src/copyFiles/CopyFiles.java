@@ -23,7 +23,6 @@ public class CopyFiles extends Thread {
         long time=System.currentTimeMillis();
         try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(adresRecipteon));
              BufferedReader bufferedReader = new BufferedReader(new FileReader(adresSource))) {
-
             String copyLine;
             while ((copyLine = bufferedReader.readLine()) != null) {
 
@@ -31,7 +30,7 @@ public class CopyFiles extends Thread {
             }
             timeRun=System.currentTimeMillis()-time;
         } catch (IOException e) {
-
+            System.out.println("Ошибка при записи в файл");
         }
     }
 }
